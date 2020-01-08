@@ -11,8 +11,7 @@ pipeline {
 
         stage('test') {
         	steps {
-                sh 'javac src/test/java/com/calculator/CalculatorTest.java'
-                sh 'cd src/test/java/ && java com.calculator.CalculatorTest'
+                sh 'mvn test'
         	}
         }
     }
